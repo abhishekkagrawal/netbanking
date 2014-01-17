@@ -1,0 +1,58 @@
+/*
+Template Name: Educational Theory
+File: Portfolio CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#portfolio{
+	display:block;
+	width:100%;
+	}
+
+#portfolio ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+
+#portfolio li{
+	display:block;
+	width:100%;
+	margin:0 0 40px 0;
+	padding:0 0 40px 0;
+	border-bottom:1px solid #D8D8D8;
+	}
+
+#portfolio li.last{
+	padding:0;
+	border-bottom:none;
+	}
+
+#portfolio .readmore{
+	display:block;
+	text-align:right;
+	}
+
+#portfolio .fl_left{
+	display:block;
+	float:left;
+	width:630px; /* Same width as the 2 column content area */
+	}
+
+#portfolio .fl_left a img{
+	width:620px;
+	height:230px;
+	border:5px solid #D8D8D8;
+	}
+
+#portfolio .fl_left a:hover img{
+	border-color:#B4B4B4;
+	}
+
+#portfolio .fl_right{
+	display:block;
+	float:right;
+	width:300px; /* Same width as the 2 column right column */
+	}

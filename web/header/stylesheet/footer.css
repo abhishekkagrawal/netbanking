@@ -1,0 +1,41 @@
+/* footer */
+
+#templatemo_footer_wrapper {
+	clear: both;
+	width: 100%;
+	background: #5e4958 url(../header/images/templatemo_footer.png) top repeat-x;
+}
+
+#templatemo_footer {
+	width: 970px;
+	padding: 30px 10px;
+	margin: 0 auto;
+	text-align: center;
+	color: #ffffff;
+}
+
+#templatemo_footer a {
+	color: #ffffff;
+}
+
+#templatemo_footer .footer_menu {
+	margin: 0 0 10px 0;
+	padding: 0px;
+	list-style: none;
+}
+
+.footer_menu li {
+	margin: 0px;
+	padding: 0 20px;
+	display: inline;
+	border-right: 1px solid #aea68c;
+}
+
+.footer_menu li a {
+	color: #ffffff;
+}
+
+.footer_menu .last_menu {
+	border: none;
+}
+/* end of footer */

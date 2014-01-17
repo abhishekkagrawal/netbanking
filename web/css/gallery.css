@@ -1,0 +1,48 @@
+/*
+Template Name: Educational Theory
+File: Gallery CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#gallery{
+	display:block;
+	width:100%;
+	line-height:1.6em;
+	}
+
+#gallery .gallerycontainer{
+	display:block;
+	width:100%;
+	margin-bottom:30px;
+	padding:0 0 20px 0;
+	border-bottom:1px solid #D8D8D8;
+	}
+
+#gallery .gallerycontainer .fl_left{
+	width:220px;
+	}
+
+#gallery .gallerycontainer .fl_right{
+	width:700px;
+	}
+
+#gallery ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+
+#gallery li{
+	float:left;
+	width:150px;
+	height:150px;
+	margin:0 20px 20px 0;
+	padding:4px;
+	border:1px solid #D8D8D8;
+	}
+
+#gallery li.last{
+	margin-right:0;
+	}

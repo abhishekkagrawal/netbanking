@@ -1,0 +1,72 @@
+/*
+Template Name: Educational Theory
+File: Featured Slider CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#featured_slide_{
+	position:relative; /* important */
+	margin:0 auto 20px;
+	display:block;
+	width:940px;
+	height:340px;
+	color:#FFFFFF;
+	background-color:#444A4F;
+	border:10px solid #737E86;
+	overflow:hidden; /* important */
+	}
+
+#featured_slide_Content{
+	width:940px; /* important to be same as image width */
+	position:absolute;
+	display:inline;
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+
+.featured_slide_Image{
+	position:relative;
+	display:none;
+	float:left;
+	margin:0;
+	padding:0;
+	width:940px; /* important - must be same as image width and slider width */
+	height:340px; /* important - must be same as image height and slider height */
+	list-style:none;
+	}
+
+.featured_slide_Image img{
+	width:940px;
+	height:340px;
+	}
+
+.featured_slide_Image div.introtext{
+	position:absolute;
+	top:0;
+	left:0;
+	width:180px;
+	height:305px;
+	padding:20px 15px 15px 15px;
+	color:#FFFFFF;
+	background-color:#000000;
+	/* Uncomment here for Opacity support in all browsers
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	-khtml-opacity:0.7;
+	*/
+	opacity:0.7;
+	display:none;
+	}
+
+#featured_slide_ h2{
+	margin:0 0 8px 0;
+	padding:0 0 8px 0;
+	text-transform:uppercase;
+	border-bottom:1px solid #949BA0;
+	}
+
+#featured_slide_ p{line-height:1.6em;}
+#featured_slide_ a{color:#179CFF; background-color:#000000;}

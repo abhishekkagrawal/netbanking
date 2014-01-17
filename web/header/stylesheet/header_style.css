@@ -1,0 +1,159 @@
+
+#asd {
+   
+	margin: 0;
+	padding: 0;
+	line-height: 1.7em;
+	letter-spacing: 1px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	color: #333;
+        
+}
+		
+a:link, a:visited { color: #dd0034; text-decoration: none; font-weight: normal; } 
+a:active, a:hover { color: #990099; text-decoration: underline; }
+
+p #headerPara{ margin: 0px; padding: 0px; }
+h2 { 
+	margin: 0 0 10px 0;
+	padding: 10px 0 15px 0;
+	font-size: 24px;
+	font-weight: normal;
+	color: #271a23;
+	
+}
+
+h3 {
+	margin: 0	;
+	padding: 2px 0;
+	font-size: 18px;
+	font-weight: normal;
+	color: #271a23;
+}
+
+#templatemo_wrapper {
+	clear: both;
+	width: 100%;
+	background: #5e4958 url(../header/images/templatemo_footer.png) top repeat-x;
+}
+
+/* menu */
+
+#templatemo_menu {
+	clear: both;
+	width: 970px;	
+	height: 90px;
+	padding: 0 10px;
+}
+
+#templatemo_menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#templatemo_menu ul li {
+	padding: 0;
+	margin: 0;
+	display: inline;
+}
+
+#templatemo_menu ul li a {
+	float: left;
+	display: block;
+	height: 70px;
+	width: 120px;
+	padding: 20px 0 0 20px;
+	font-size: 18px;
+	text-decoration: none;
+	color: #ffffff;	
+	font-weight: normal;
+	outline: none;	
+	
+}
+
+#templatemo_menu ul li a span {
+	display: block;
+	color: #b56076;
+	font-size: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+
+#templatemo_menu li a:hover span, #templatemo_menu li .current span {
+	color: #ffffff;
+}
+
+/* end of menu */
+
+/* header */
+
+#templatemo_header_bar {
+	clear: both;
+	width: 970px;
+	height: 115px;
+	padding: 0 10px;
+	overflow: hidden;
+	}
+
+#templatemo_header_bar  #header {
+	position: relative;
+	float: left;
+	padding: 0 30px;
+	margin-top: 20px;
+	overflow: hidden;
+	
+}
+
+#templatemo_header_bar  #header .right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 25px;
+	height: 83px;
+	
+}
+
+#templatemo_header_bar  #header #h1Header {
+	margin: 0;
+	padding: 5px 0;
+}
+
+#templatemo_header_bar  #header #h1Header a {
+	margin: 0px;
+	padding: 0px;
+	font-size: 30px;
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#templatemo_header_bar  #header #h1Header a:hover {
+	font-weight: bold;	
+	text-decoration: none;
+}
+
+#templatemo_header_bar  #header #h1Header a span {
+	display: block;
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: normal;
+	letter-spacing: 2px;
+}
+
+
+#templatemo_header_bar #search_box {
+	float: right;
+	width: 280px;
+	height: 29px;
+	padding: 1px;
+	margin-top: 70px;
+	
+}
+/* end of header */
+
+
+

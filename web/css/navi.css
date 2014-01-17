@@ -1,0 +1,257 @@
+/*
+Template Name: Educational Theory
+File: Navigation CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#topnav{
+	position:relative;
+	margin:0 auto 0;
+	display:block;
+	width:960px;
+	padding:0 0 30px 0;
+	text-align:center;
+	}
+
+#topnav ul, #topnav li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+
+#topnav li{
+	display:inline;
+	margin-right:3px;
+	}
+
+#topnav li a{
+	display:inline-block;
+	height:40px;
+	padding-left:14px;
+	text-transform:uppercase;
+	color:#EBEBEC;
+	background:url("../images/topnav_left.gif") top left no-repeat transparent;
+	}
+
+#topnav li a strong{
+	padding:12px 14px 12px 0;
+	line-height:40px;
+	white-space:nowrap;
+	font-weight:normal;
+	background:url("../images/topnav_right.gif") top right no-repeat;
+	}
+
+#topnav li a:hover, #topnav li.active a{
+	background-position:0 -30px;
+        background-color:#2B2B2B;
+	}
+
+#topnav li a:hover strong, #topnav li.active a strong{
+	background-position:right -40px;
+	}
+
+#topnav li.last{
+	margin:0;
+	}
+
+/* ----------------------------------------------Student Quick Navigation-------------------------------------*/
+
+#quicknav{
+	position:relative;
+	margin:0 auto 0;
+	display:block;
+	width:1050px;
+	height:30px;
+	padding-top:20px;
+	text-align:center;
+	line-height:normal;
+	z-index:800;
+	}
+
+#quicknav ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+
+#quicknav ul li{
+	float:left;
+	margin-right:22px;
+	padding-right:24px;
+	text-transform:uppercase;
+	font-weight:bold;	
+	}
+
+#quicknav ul li li{
+	display:block;
+	float:none;
+	margin:0;
+	padding:0;
+	border:none;
+	text-align:left;
+	text-transform:none;
+	}
+
+#quicknav ul li a{
+	display:block;
+	margin:0;
+	padding:0;
+	font-size:14px;
+	color:#6A7279;
+	background-color:transparent;
+	}
+
+#quicknav ul li li a{
+	width:180px;
+	padding:7px 10px;
+	font-size:12px;
+	font-weight:normal;
+	color:#6A7279;
+	background-color:#EBEBEB;
+	}
+
+#quicknav ul li li a:hover{
+	color:#676767;
+	background-color:#2B2B2B;
+	}
+
+#quicknav ul ul{
+	z-index:9999;
+	position:absolute;
+	left:-999em;
+	height:auto;
+	width:200px;
+	}
+
+#quicknav ul li:hover ul{
+	left:auto;
+	padding-top:10px;
+	}
+
+#quicknav ul li:hover{
+	position:static;
+	}
+
+#quicknav li.last{
+	margin:0;
+	padding:0;
+	border:none;
+	}
+
+/* ----------------------------------------------Column Navigation-------------------------------------*/
+
+#column .subnav{
+	display:block;
+	width:250px;
+	padding:25px;
+	background-color:#F7F7F7;
+	margin-bottom:30px;
+	}
+
+#column .subnav h2{
+	margin:0 0 20px 0;
+	padding:0 0 14px 0;
+	font-size:20px;
+	font-weight:normal;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#8199A9;
+	background-color:#F7F7F7;
+	line-height:normal;
+	border-bottom:1px dotted #666666;
+	}
+
+#column .subnav ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+
+#column .subnav li{
+	margin:0 0 3px 0;
+	padding:0;
+	}
+
+#column .subnav ul ul, #column .subnav ul ul ul, #column .subnav ul ul ul ul, #column .subnav ul ul ul ul ul{
+	border-top:none;
+	padding-top:0;
+	}
+
+#column .subnav a{
+	display:block;
+	margin:0;
+	padding:5px 10px 5px 20px;
+	color:#666666;
+	background:url("../images/blue_file.gif") no-repeat 10px center #F7F7F7;
+	text-decoration:none;
+	border-bottom:1px dotted #666666;
+	}
+
+#column .subnav a:hover{
+	color:#179CFF;
+	background-color:#F7F7F7;
+	}
+
+#column .subnav ul ul a, #column .subnav ul ul ul a, #column .subnav ul ul ul ul a, #column .subnav ul ul ul ul ul a{
+	background:url("../images/black_file.gif") no-repeat #F7F7F7;
+	}
+
+#column .subnav ul ul a{
+	padding-left:40px;
+	background-position:30px center;
+	}
+
+#column .subnav ul ul ul a{
+	padding-left:50px;
+	background-position:40px center;
+	}
+
+#column .subnav ul ul ul ul a{
+	padding-left:60px;
+	background-position:50px center;
+	}
+
+#column .subnav ul ul ul ul ul a{
+	padding-left:70px;
+	background-position:60px center;
+	}
+
+/* ----------------------------------------------Pagination-------------------------------------*/
+
+.pagination{
+	display:block;
+	width:100%;
+	clear:both;
+	}
+
+.pagination ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+
+.pagination li{
+	display:inline;
+	}
+
+.pagination .next{
+	margin:0;
+	}
+
+.pagination a{
+	display:inline-block;
+	padding:2px 5px 3px 5px;
+	margin:0 2px 0 0;
+	border:1px solid #D8D9DE;
+	}
+
+.pagination .current, .pagination .splitter{
+	padding:6px;
+	margin:0 2px 0 0;
+	}
+
+.wrapper .pagination a:hover, .pagination .current, .pagination .splitter{
+	color:#000000;
+	background-color:#EBEDEE;
+	}

@@ -1,0 +1,391 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!--    <include file="example.xml"/>-->
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="*UserIdAction" class="com.webaccess.netbanking.action.UserIdAction" method="{1}">
+            <result name="success">/jsps/loginPage.jsp</result>
+            <result name="input">/jsps/startPage.jsp</result>
+            <result name="newuser">/jsps/newRegistration.jsp</result>
+            <result name="forgotPassword">/jsps/forgotPassword.jsp</result>
+            <result name="back">/jsps/startPage.jsp</result>    
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        <action name="*LoginPageAction" class="com.webaccess.netbanking.action.LoginPageAction" method="{1}">
+            <result type="chain" name="success" >getData</result>
+            <result name="input">/jsps/loginPage.jsp</result>
+            <result name="differentUser">/jsps/startPage.jsp</result>
+            <result name="newuser">/jsps/newRegistration.jsp</result>
+            <result name="forgotPassword">/jsps/forgotPassword.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        <action name="getData" class="com.webaccess.netbanking.action.GetUserInformation">
+            <result name="success" > /jsps/Home.jsp</result>                   
+        </action>
+        
+        <action name="*NewRegistrationPageAction" class="com.webaccess.netbanking.action.NewRegistrationAction" method="{1}" >
+            <!--            <interceptor-ref name="token"/>
+            <interceptor-ref name="basicStack"/>
+            <result  name="invalid.token">/jsps/errorPage.jsp</result>-->
+            
+            <result name="success">/jsps/thankURegistration.jsp</result>
+            <result name="aaa">/jsps/thankURegistration.jsp</result>
+            <result name="back">/jsps/startPage.jsp</result>  
+            <result name="asd">/jsps/newRegistration.jsp</result>   
+            <result name="error">/jsps/errorPage.jsp</result>        
+        </action>
+        
+        <action name="thankUPage" class="com.webaccess.netbanking.action.ThankUPageAction">
+            <!--            <interceptor-ref name="token"/>
+            <interceptor-ref name="basicStack"/>
+            <result  name="invalid.token">/jsps/errorPage.jsp</result>
+            -->
+            <result name="success">/jsps/startPage.jsp</result>               
+        </action>
+        <action name="ForgotUserIdAction" class="com.webaccess.netbanking.action.ForgotUserIdAction">
+            <!--            <interceptor-ref name="token"/>
+            <interceptor-ref name="basicStack"/>
+            <result  name="invalid.token">/jsps/errorPage.jsp</result>-->
+            
+            <result name="success">/jsps/passwordResetPage.jsp</result>  
+            <result name="input">/jsps/forgotPassword.jsp</result>  
+                       
+        </action>
+        
+        <action name="PasswordReset" class="com.webaccess.netbanking.action.PasswordResetPageAction">
+            <!--            <interceptor-ref name="token"/>
+            <interceptor-ref name="basicStack"/>
+            <result  name="invalid.token">/jsps/errorPage.jsp</result>-->
+            
+            <result name="success">/jsps/thankUPasswordReset.jsp</result>  
+            <result name="input">/jsps/passwordResetPage.jsp</result>               
+        </action>
+        <action name="LogoutAction" class="com.webaccess.netbanking.action.LogoutAction">
+            <!--            <interceptor-ref name="token"/>
+            <interceptor-ref name="basicStack"/>
+            <result  name="invalid.token">/jsps/errorPage.jsp</result>-->
+            
+            <result name="success">/jsps/startPage.jsp</result>  
+            <result name="error">/jsps/errorPage.jsp</result>                       
+        </action>
+ 
+        <action name="*HomeAction" class="com.webaccess.netbanking.action.HomeAction" method="{1}">
+            <!--            <interceptor-ref name="token"/>
+            <interceptor-ref name="basicStack"/>
+            <result  name="invalid.token">/jsps/errorPage.jsp</result>-->
+            
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="miniStatement" >/jsps/miniStatementPage.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        <action name="*MinistatementPageAction" class="com.webaccess.netbanking.action.MiniStatementPageAction" method="{1}">
+            <!--            <interceptor-ref name="token"/>
+            <interceptor-ref name="basicStack"/>
+            <result  name="invalid.token">/jsps/errorPage.jsp</result>-->
+            
+            <result name="accountDetail">/jsps/accountDetail.jsp</result>
+            <result name="go">/jsps/Home.jsp</result>            
+            <result name="viewAndSaveStatemant">/jsps/printAndViewStatementPage.jsp</result>
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        <action name="*ViewAndSavePageAction" class="com.webaccess.netbanking.action.ViewAndSavePageAction" method="{1}">
+            <!--            <interceptor-ref name="token"/>
+            <interceptor-ref name="basicStack"/>
+            <result  name="invalid.token">/jsps/errorPage.jsp</result>-->
+            
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="back">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="miniStatement">/jsps/miniStatementPage.jsp</result>
+            <result name="accountDetail">/jsps/accountDetail.jsp</result>
+            <result name="monthTransactionDetail">/jsps/showTransactionDetailPage.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        <action name="*AccountDetailPageAction" class="com.webaccess.netbanking.action.AccountDetailPageAction" method="{1}">
+            <!--            <interceptor-ref name="token"/>
+            <interceptor-ref name="basicStack"/>
+            <result  name="invalid.token">/jsps/errorPage.jsp</result>-->
+            
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="back">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="miniStatement">/jsps/miniStatementPage.jsp</result>
+            <result name="viewAndSave">/jsps/printAndViewStatementPage.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>             
+        
+        <action name="*ShowTransactionDetailPageAction" class="com.webaccess.netbanking.action.ShowTransactionDetailPageAction" method="{1}">
+            <!--            <interceptor-ref name="token"/>
+            <interceptor-ref name="basicStack"/>
+            <result  name="invalid.token">/jsps/errorPage.jsp</result>-->
+            
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="back">/jsps/printAndViewStatementPage.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="miniStatement">/jsps/miniStatementPage.jsp</result>
+            <result name="viewaAndSaveStatement">/jsps/printAndViewStatementPage.jsp</result>
+            <result name="accountDetail">/jsps/accountDetail.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        <action name="*PersonalDetailPageAction" class="com.webaccess.netbanking.action.PersonalDetailPageAction" method="{1}">
+            <!--            <interceptor-ref name="token"/>
+            <interceptor-ref name="basicStack"/>
+            <result  name="invalid.token">/jsps/errorPage.jsp</result>-->
+            
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="myProfile">/jsps/myProfilePage.jsp</result>
+            <result name="changeLoginPassword">/jsps/loginPasswordChangePage.jsp</result>
+            <result name="changeTransactionPassword">/jsps/transactionPasswordChangePage.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        <action name="*MyProfilePageAction" class="com.webaccess.netbanking.action.MyProfilePageAction" method="{1}">
+            <result name="success">/jsps/Home.jsp</result>
+            <result name="input">/jsps/loginPasswordChangePage.jsp</result>
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="myProfile">/jsps/myProfilePage.jsp</result>
+            <result name="changeLoginPassword" >/jsps/loginPasswordChangePage.jsp</result>
+            <result name="changeTransactionPassword" >/jsps/transactionPasswordChangePage.jsp</result>
+            <result name="back">/jsps/personalDetailPage.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        
+        <action name="*LoginPasswordChangePageAction" class="com.webaccess.netbanking.action.LoginPasswordChangePageAction" method="{1}">
+            <result name="success">/jsps/startPage.jsp</result>
+            <result name="input">/jsps/loginPasswordChangePage.jsp</result>
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="myProfile">/jsps/myProfilePage.jsp</result>
+            <result name="changeLoginPassword" >/jsps/loginPasswordChangePage.jsp</result>
+            <result name="changeTransactionPassword" >/jsps/transactionPasswordChangePage.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        <action name="*TransactionPasswordChangePageAction" class="com.webaccess.netbanking.action.TransactionPasswordChangePageAction" method="{1}">
+            <result name="success">/jsps/startPage.jsp</result>
+            <result name="input">/jsps/transactionPasswordChangePage.jsp</result>
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="myProfile">/jsps/myProfilePage.jsp</result>
+            <result name="changeLoginPassword" >/jsps/loginPasswordChangePage.jsp</result>
+            <result name="changeTransactionPassword" >/jsps/transactionPasswordChangePage.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        
+        <action name="*TransferPageAction" class="com.webaccess.netbanking.action.TransferPageAction" method="{1}">
+            <!--            <interceptor-ref name="token"/>
+            <interceptor-ref name="basicStack"/>
+            <result  name="invalid.token">/jsps/errorPage.jsp</result>-->            
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="neftTransfer">/jsps/newTransactionNEFT.jsp</result>
+            <result name="rtgsTransfer">/jsps/newTransactionRTGS.jsp</result>    
+            <result name="error">/jsps/errorPage.jsp</result>        
+        </action>
+        
+        <action name="*RegisterBeneficiaryNEFTAction" class="com.webaccess.netbanking.action.RegisterBeneficiaryNEFTAction" method="{1}">
+            <result name="success">/jsps/Home.jsp</result>
+            <result name="input">/jsps/registerBeneficiaryNEFT.jsp</result>
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="registerBeneficary">/jsps/registerBeneficiaryNEFT.jsp</result>
+            <result name="confirAndRejectBeneficiary" >/jsps/confirmAndRejectBeneficiaryNEFT.jsp</result>
+            <result name="newTransaction" >/jsps/newTransactionNEFT.jsp</result>
+            <result name="registeredBeneficiary">/jsps/registeredBeneficiaryNEFT.jsp</result>
+            <result name="back">/jsps/transferPage.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        <action name="*ConfirmAndRejectBeneficiaryNEFTAction" class="com.webaccess.netbanking.action.ConfirmAndRejectBeneficiaryNEFTAction" method="{1}">
+            <result name="success">/jsps/Home.jsp</result>
+            <result name="input">/jsps/confirmAndRejectBeneficiaryNEFT.jsp</result>
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="registerBeneficary">/jsps/registerBeneficiaryNEFT.jsp</result>
+            <result name="confirAndRejectBeneficiary" >/jsps/confirmAndRejectBeneficiaryNEFT.jsp</result>
+            <result name="newTransaction" >/jsps/newTransactionNEFT.jsp</result>
+            <result name="registeredBeneficiary">/jsps/registeredBeneficiaryNEFT.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        <action name="*NewTransactionNEFTAction" class="com.webaccess.netbanking.action.NewTransactionNEFTAction" method="{1}">
+            <result type="chain" name="success" >getData</result>           
+            <result name="input">/jsps/NewTransactionNEFTAction.jsp</result>
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="registerBeneficary">/jsps/registerBeneficiaryNEFT.jsp</result>
+            <result name="confirAndRejectBeneficiary" >/jsps/confirmAndRejectBeneficiaryNEFT.jsp</result>
+            <result name="newTransaction" >/jsps/newTransactionNEFT.jsp</result>
+            <result name="registeredBeneficiary">/jsps/registeredBeneficiaryNEFT.jsp</result>
+            <result name="input" >/jsps/newTransactionNEFT.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        
+        <action name="*RegisteredBeneficiaryNEFTAction" class="com.webaccess.netbanking.action.RegisteredBeneficiaryNEFTAction" method="{1}">
+            <result name="success">/jsps/Home.jsp</result>
+            <result name="input">/jsps/registeredBeneficiaryNEFT.jsp</result>
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="funds">/jsps/fundsPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="registerBeneficary">/jsps/registerBeneficiaryNEFT.jsp</result>
+            <result name="confirAndRejectBeneficiary" >/jsps/confirmAndRejectBeneficiaryNEFT.jsp</result>
+            <result name="newTransaction" >/jsps/newTransactionNEFT.jsp</result>
+            <result name="registeredBeneficiary">/jsps/registeredBeneficiaryNEFT.jsp</result>
+            <result name="error">/jsps/errorPage.jsp</result>
+        </action>
+        
+        <action name="*AddBillPageAction" class="com.webaccess.netbanking.action.AddBillPageAction" method="{1}">
+            <result name="success">/jsps/Home.jsp</result>
+            <result name="input">/jsps/addBillpage.jsp</result>
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="electricity">/jsps/Home.jsp</result>
+            <result name="payBill">/jsps/payBillPage.jsp</result>
+            <result name="modifyBill">/jsps/modifyBillPage.jsp</result>   
+            <result name="error">/jsps/errorPage.jsp</result>        
+        </action>
+        
+        <action name="*ModifyBillPageAction" class="com.webaccess.netbanking.action.ModifyBillPageAction" method="{1}">
+            <result name="success">/jsps/Home.jsp</result>
+            <result name="input">/jsps/modifyBillPage.jsp</result>
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="electricity">/jsps/Home.jsp</result>
+            <result name="payBill">/jsps/payBillPage.jsp</result>
+            <result name="modifyBill">/jsps/modifyBillPage.jsp</result>   
+            <result name="error">/jsps/errorPage.jsp</result>        
+        </action>
+        
+        <action name="*PayBillPageAction" class="com.webaccess.netbanking.action.PayBillPageAction" method="{1}">
+            <result name="success">/jsps/Home.jsp</result>
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="electricity">/jsps/Home.jsp</result>
+            <result name="payBill">/jsps/payBillPage.jsp</result>
+            <result name="modifyBill">/jsps/modifyBillPage.jsp</result>  
+            <result name="error">/jsps/errorPage.jsp</result>   
+            <result name="input">/jsps/payBillPage.jsp</result>          
+        </action>
+        
+        <action name="*CardDetailPageAction" class="com.webaccess.netbanking.action.CardDetailPageAction" method="{1}">
+            <result name="myAccount">/jsps/Home.jsp</result>
+            <result name="success">/jsps/Home.jsp</result>
+            <result name="input">/jsps/cardDetailPage.jsp</result>
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="applyCard">/jsps/applyCreditCard.jsp</result>
+            <result name="payCardBill">/jsps/payCreditCardBillPage.jsp</result> 
+            <result name="addCreditCard">/jsps/addCreditCard.jsp</result> 
+            <result name="error">/jsps/errorPage.jsp</result>              
+        </action>
+        
+        <action name="*ApplyCreditCardAction" class="com.webaccess.netbanking.action.ApplyCreditCardAction" method="{1}">
+            <result name="myAccount">/jsps/Home.jsp</result>             
+            <result name="transfer">/jsps/transferPage.jsp</result>
+            <result name="billPayment">/jsps/addBillpage.jsp</result>
+            <result name="cardDetail">/jsps/cardDetailPage.jsp</result>
+            <result name="personalDetail">/jsps/personalDetailPage.jsp</result>
+            <result name="applyCard">/jsps/applyCreditCard.jsp</result>
+            <result name="payCardBill">/jsps/payCreditCardBillPage.jsp</result> 
+            <result name="addCreditCard">/jsps/addCreditCard.jsp</result> 
+            <result name="payCreditCardBill">/jsps/payCreditCardBillPage.jsp</result>
+            <result name="success">/jsps/Home.jsp</result> 
+            <result name="error">/jsps/errorPage.jsp</result>  
+            <result name="input">/jsps/applyCreditCard.jsp</result>         
+        </action>
+        
+      
+        
+        <!-- .......................................Ajax actions............................................... -->
+        <action name="deleteBeneficiary" class="com.webaccess.netbanking.action.DeleteBeneficiaryAjexAction"/>
+        <action name="deleteElectricityBilldetail" class="com.webaccess.netbanking.action.BillAjaxAction" method="deleteElectricityBilldetail"/>
+        <action name="deleteBSNLCelloneDetail" class="com.webaccess.netbanking.action.BillAjaxAction" method="deleteBSNLCelloneDetail"/>
+        <action name="deleteSBILifeInsurenceDetail" class="com.webaccess.netbanking.action.BillAjaxAction" method="deleteSBILifeInsurenceDetail"/>
+        <action name="getMaxLimit" class="com.webaccess.netbanking.action.CreditCardAjaxAction" method="getMaxLimit"/>
+    </package>
+    <!-- ....................................... ERROR actions............................................... -->
+    
+</struts>
